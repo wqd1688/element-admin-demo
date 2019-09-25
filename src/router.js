@@ -6,7 +6,9 @@ import page1 from './views/page1.vue'
 import page2 from './views/page2.vue'
 import page3 from './views/page3.vue'
 import page4 from './views/page4.vue'
-import login from './views/Login'
+import login from './views/Login.vue'
+import profile from './views/profile'
+
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +22,11 @@ export default new Router({
       component: Home,
       redirect: 'welcome',
       children: [
+        {
+          path: 'profile',
+          name: '个人信息',
+          component: profile
+        },
         {
           path: 'welcome',
           name: 'welcome',
